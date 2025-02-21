@@ -69,6 +69,6 @@ php artisan storage:link
 ```sh
 composer run dev
 ```
-Открываем браузер и заходим на:
+Адрес проекта:
 `http://127.0.0.1:8000`
 
