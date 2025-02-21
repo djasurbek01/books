@@ -53,5 +53,7 @@
     </tbody>
 </table>
 
-{{ $books->links() }}
+<div class="d-flex justify-content-center mt-4">
+    {{ $books->links('pagination::bootstrap-5') }}
+</div>
 @endsection
