@@ -23,7 +23,11 @@
         @foreach($books as $book)
             <tr>
                 <td>{{ $book->id }}</td>
-                <td><img src="{{ asset('/storage/' . $book->cover_url) }}" width="50"></td>
+                @if ($book->cover_url == 'covers/default_cover.jpg')
+                    <td><img src="{{ asset('/images/' . $book->cover_url) }}" width="50"></td>
+                @else
+                    <td><img src="{{ asset('/storage/' . $book->cover_url) }}" width="50"></td>
+                @endif
                 <td>{{ $book->title }}</td>
                 @if($book->status == 'published')
                     <td>Опубликована</td>
